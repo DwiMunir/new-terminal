@@ -1,0 +1,6 @@
+allowBuilds:
+  esbuild: true
+  sharp: true
+  '@libsql/client': true
+  libsql: true
+  unrs-resolver: true

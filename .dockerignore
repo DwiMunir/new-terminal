@@ -1,0 +1,26 @@
+node_modules
+.next
+.git
+.gitignore
+
+# secrets & local data (provided on the host / via volume)
+.env
+.env.*
+!.env.example
+data
+*.db
+*.db-shm
+*.db-wal
+media
+
+# source spreadsheet (json snapshot in src/data is what gets used)
+*.xlsx
+
+# misc
+.DS_Store
+*.log
+npm-debug.log*
+Dockerfile
+docker-compose.yml
+DEPLOY.md
+README*.md

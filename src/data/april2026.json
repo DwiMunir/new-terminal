@@ -1,0 +1,361 @@
+{
+ "source": "REKAP_BUS_AKAP_AKDP_KUTOARJO_APRIL2026 (1).xlsx",
+ "operators": [
+  "AGRA MAS",
+  "ANTAR JAYA",
+  "BUDIMAN",
+  "DUA  PUTRA",
+  "EFISIENSI",
+  "FIRDAUS TRANS",
+  "HANDOYO",
+  "MULYO",
+  "NUGROHO",
+  "PEBEPE",
+  "PRAYOGO",
+  "PRIMKOP KARTIKA",
+  "ROSALIA INDAH",
+  "SIDOMAKMUR",
+  "SINAR JAYA",
+  "TRANS JATENG"
+ ],
+ "routes": [
+  {
+   "operator": "AGRA MAS",
+   "trayek": "Yogyakarta - Jakarta",
+   "type": "AKAP",
+   "priceMin": 150000,
+   "priceMax": 250000,
+   "distanceKm": 565,
+   "times": [
+    "09:38",
+    "10:05",
+    "11:05",
+    "11:12",
+    "13:15",
+    "13:30",
+    "14:07",
+    "14:35",
+    "14:40",
+    "14:50",
+    "14:55",
+    "15:30",
+    "15:36",
+    "15:40",
+    "15:45",
+    "15:46",
+    "16:00",
+    "16:05",
+    "16:15"
+   ]
+  },
+  {
+   "operator": "ANTAR JAYA",
+   "trayek": "Yogyakarta - Jakarta",
+   "type": "AKAP",
+   "priceMin": 150000,
+   "priceMax": 250000,
+   "distanceKm": 565,
+   "times": [
+    "09:15",
+    "10:05"
+   ]
+  },
+  {
+   "operator": "ANTAR JAYA",
+   "trayek": "Yogyakarta - PURWOREJO - PURWOKERTO",
+   "type": "AKAP",
+   "priceMin": 30000,
+   "priceMax": 50000,
+   "distanceKm": 115,
+   "times": [
+    "09:38",
+    "11:00",
+    "12:25",
+    "12:32",
+    "13:05"
+   ]
+  },
+  {
+   "operator": "BUDIMAN",
+   "trayek": "SEMARANG - TASIKMALAYA",
+   "type": "AKAP",
+   "priceMin": 80000,
+   "priceMax": 130000,
+   "distanceKm": 310,
+   "times": [
+    "14:14"
+   ]
+  },
+  {
+   "operator": "EFISIENSI",
+   "trayek": "Yogyakarta - Jakarta",
+   "type": "AKAP",
+   "priceMin": 150000,
+   "priceMax": 250000,
+   "distanceKm": 565,
+   "times": [
+    "09:10",
+    "11:21"
+   ]
+  },
+  {
+   "operator": "HANDOYO",
+   "trayek": "Yogyakarta - Jakarta",
+   "type": "AKAP",
+   "priceMin": 150000,
+   "priceMax": 250000,
+   "distanceKm": 565,
+   "times": [
+    "10:05",
+    "10:15",
+    "14:07",
+    "14:08",
+    "14:50",
+    "15:36",
+    "15:42",
+    "15:45",
+    "15:50"
+   ]
+  },
+  {
+   "operator": "MULYO",
+   "trayek": "Yogyakarta - PURWOREJO - PURWOKERTO",
+   "type": "AKAP",
+   "priceMin": 30000,
+   "priceMax": 50000,
+   "distanceKm": 115,
+   "times": [
+    "08:31",
+    "08:44",
+    "09:05",
+    "09:10",
+    "09:15",
+    "10:00",
+    "10:05",
+    "10:11",
+    "10:15",
+    "11:05",
+    "11:12",
+    "11:21",
+    "12:45",
+    "13:05",
+    "14:55",
+    "15:30",
+    "15:32",
+    "16:15",
+    "16:16"
+   ]
+  },
+  {
+   "operator": "PEBEPE",
+   "trayek": "Yogyakarta - Jakarta",
+   "type": "AKAP",
+   "priceMin": 150000,
+   "priceMax": 250000,
+   "distanceKm": 565,
+   "times": [
+    "11:05",
+    "12:25",
+    "13:05",
+    "13:15",
+    "14:08",
+    "14:14",
+    "14:36",
+    "14:45",
+    "14:55",
+    "15:30",
+    "15:32",
+    "15:36",
+    "15:40",
+    "15:50",
+    "16:00",
+    "16:35",
+    "16:50"
+   ]
+  },
+  {
+   "operator": "PRAYOGO",
+   "trayek": "Yogyakarta - PURWOREJO - PURWOKERTO",
+   "type": "AKAP",
+   "priceMin": 30000,
+   "priceMax": 50000,
+   "distanceKm": 115,
+   "times": [
+    "08:44",
+    "10:05",
+    "11:05"
+   ]
+  },
+  {
+   "operator": "ROSALIA INDAH",
+   "trayek": "Yogyakarta - Jakarta",
+   "type": "AKAP",
+   "priceMin": 150000,
+   "priceMax": 250000,
+   "distanceKm": 565,
+   "times": [
+    "12:32",
+    "14:40",
+    "15:40",
+    "15:44",
+    "15:45",
+    "16:00",
+    "16:36"
+   ]
+  },
+  {
+   "operator": "SINAR JAYA",
+   "trayek": "Yogyakarta - Jakarta",
+   "type": "AKAP",
+   "priceMin": 150000,
+   "priceMax": 250000,
+   "distanceKm": 565,
+   "times": [
+    "08:55",
+    "09:10",
+    "14:40",
+    "14:55",
+    "15:40",
+    "15:45",
+    "16:00",
+    "16:16"
+   ]
+  },
+  {
+   "operator": "DUA  PUTRA",
+   "trayek": "PURWOREJO - KUTOARJO - KEBUMEN",
+   "type": "AKDP",
+   "priceMin": 8000,
+   "priceMax": 12000,
+   "distanceKm": 45,
+   "times": [
+    "12:05",
+    "12:28",
+    "12:41",
+    "12:44",
+    "13:24",
+    "13:26",
+    "13:41",
+    "13:52",
+    "14:10",
+    "14:19",
+    "15:04"
+   ]
+  },
+  {
+   "operator": "FIRDAUS TRANS",
+   "trayek": "PURWOREJO - KUTOARJO - KEBUMEN",
+   "type": "AKDP",
+   "priceMin": 8000,
+   "priceMax": 12000,
+   "distanceKm": 45,
+   "times": [
+    "11:44",
+    "11:47",
+    "12:05",
+    "13:20",
+    "13:24",
+    "13:38",
+    "13:42",
+    "13:54",
+    "13:55",
+    "14:19",
+    "14:21",
+    "14:28",
+    "14:44"
+   ]
+  },
+  {
+   "operator": "NUGROHO",
+   "trayek": "PURWOREJO - KUTOARJO - KEBUMEN",
+   "type": "AKDP",
+   "priceMin": 8000,
+   "priceMax": 12000,
+   "distanceKm": 45,
+   "times": [
+    "11:44",
+    "12:05",
+    "12:22",
+    "12:41",
+    "12:44",
+    "13:24",
+    "13:38",
+    "13:42",
+    "13:52",
+    "13:56",
+    "14:00",
+    "14:05",
+    "14:10",
+    "14:19",
+    "14:21",
+    "14:24",
+    "14:26"
+   ]
+  },
+  {
+   "operator": "PRIMKOP KARTIKA",
+   "trayek": "PURWOREJO - KUTOARJO - KEBUMEN",
+   "type": "AKDP",
+   "priceMin": 8000,
+   "priceMax": 12000,
+   "distanceKm": 45,
+   "times": [
+    "11:47",
+    "12:05",
+    "12:25",
+    "12:28",
+    "12:38",
+    "12:44",
+    "13:24",
+    "13:45",
+    "13:52",
+    "13:59",
+    "14:02"
+   ]
+  },
+  {
+   "operator": "SIDOMAKMUR",
+   "trayek": "PURWOREJO - KUTOARJO - KEBUMEN",
+   "type": "AKDP",
+   "priceMin": 8000,
+   "priceMax": 12000,
+   "distanceKm": 45,
+   "times": [
+    "12:44",
+    "13:38",
+    "14:01",
+    "14:20",
+    "14:31"
+   ]
+  },
+  {
+   "operator": "TRANS JATENG",
+   "trayek": "KUTOARJO - BOROBUDUR",
+   "type": "AKDP",
+   "priceMin": 10000,
+   "priceMax": 15000,
+   "distanceKm": 55,
+   "times": [
+    "07:10",
+    "07:15",
+    "07:30",
+    "07:32",
+    "07:50",
+    "08:10",
+    "08:30",
+    "08:50",
+    "09:10",
+    "09:30",
+    "09:50",
+    "10:10",
+    "10:30",
+    "10:50",
+    "11:10",
+    "11:30",
+    "11:47",
+    "11:50",
+    "12:05"
+   ]
+  }
+ ]
+}

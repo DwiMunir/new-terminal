@@ -1,0 +1,21 @@
+node_modules
+.next
+build
+dist
+
+# database (sqlite)
+*.db
+*.db-shm
+*.db-wal
+
+# env
+.env
+.env.*
+!.env.example
+
+# payload
+/media
+
+# misc
+.DS_Store
+*.log

@@ -1,0 +1,44 @@
+services:
+  app:
+    build:
+      context: .
+      target: runner
+    image: terminal-schedule:latest
+    restart: unless-stopped
+    ports:
+      # host:container — ganti 3080 ke port host lain kalau perlu (container tetap 3000)
+      - '3080:3000'
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      # SQLite db + media live on the ./data bind mount (persisted, easy to back up)
+      DATABASE_URI: file:/app/data/terminal-schedule.db
+      MEDIA_DIR: /app/data/media
+      # Uncomment & set to your public URL so admin login works behind a domain:
+      # NEXT_PUBLIC_SERVER_URL: https://jadwal.terminalkutoarjo.id
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ['CMD', 'node', '-e', "fetch('http://127.0.0.1:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  # One-off importer: loads src/data/april2026.json into ./data/terminal-schedule.db.
+  # Run once:  docker compose run --rm seed
+  seed:
+    build:
+      context: .
+      target: builder
+    profiles: ['seed']
+    user: '1001:1001'
+    env_file:
+      - .env
+    environment:
+      DATABASE_URI: file:/app/data/terminal-schedule.db
+      MEDIA_DIR: /app/data/media
+    volumes:
+      - ./data:/app/data
+    command: ['node_modules/.bin/tsx', 'src/seed.ts']
