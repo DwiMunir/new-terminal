@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { getLocale } from '@/lib/locale'
 import { messages } from '@/lib/i18n'
 import { TerminalBackground } from '@/components/TerminalBackground'
-import { WhatsAppFab } from '@/components/WhatsAppFab'
+import { ComplaintFab } from '@/components/ComplaintFab'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default async function FrontendLayout({ children }: { children: ReactNode
       <body className="relative min-h-screen bg-slate-950 text-slate-100 antialiased">
         <TerminalBackground />
         <div className="relative z-10">{children}</div>
-        <WhatsAppFab label={messages[locale].waChat} />
+        <ComplaintFab label={messages[locale].complaintCta} />
       </body>
     </html>
   )

@@ -36,7 +36,15 @@ function TypeBadge({ type }: { type: 'AKAP' | 'AKDP' }) {
 const fieldCls =
   'rounded-lg border border-white/10 bg-slate-800/70 px-3 py-1.5 text-sm text-slate-100 outline-none transition-colors focus:border-amber-400/60 focus:ring-2 focus:ring-amber-400/20'
 
-export function DepartureBoard({ rows, t }: { rows: DepartureRow[]; t: Messages }) {
+export function DepartureBoard({
+  rows,
+  t,
+  showFare = true,
+}: {
+  rows: DepartureRow[]
+  t: Messages
+  showFare?: boolean
+}) {
   const [q, setQ] = useState('')
   const [type, setType] = useState<TypeFilter>('ALL')
   const [operator, setOperator] = useState('ALL')
@@ -113,8 +121,8 @@ export function DepartureBoard({ rows, t }: { rows: DepartureRow[]; t: Messages 
 
           <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} aria-label={t.sort} className={fieldCls}>
             <option value="time">{t.sortTime}</option>
-            <option value="price-asc">{t.sortPriceLow}</option>
-            <option value="price-desc">{t.sortPriceHigh}</option>
+            {showFare && <option value="price-asc">{t.sortPriceLow}</option>}
+            {showFare && <option value="price-desc">{t.sortPriceHigh}</option>}
           </select>
 
           {dirty && (
@@ -152,7 +160,7 @@ export function DepartureBoard({ rows, t }: { rows: DepartureRow[]; t: Messages 
                     <th scope="col" className="px-5 py-2.5 font-semibold">{t.colPo}</th>
                     <th scope="col" className="px-5 py-2.5 font-semibold">{t.colRoute}</th>
                     <th scope="col" className="px-5 py-2.5 font-semibold">{t.colJenis}</th>
-                    <th scope="col" className="px-5 py-2.5 text-right font-semibold">{t.colPrice}</th>
+                    {showFare && <th scope="col" className="px-5 py-2.5 text-right font-semibold">{t.colPrice}</th>}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
@@ -166,7 +174,7 @@ export function DepartureBoard({ rows, t }: { rows: DepartureRow[]; t: Messages 
                         {r.note ? <span className="block text-xs text-slate-500">{r.note}</span> : null}
                       </td>
                       <td className="px-5 py-3"><TypeBadge type={r.type} /></td>
-                      <td className="px-5 py-3 text-right font-semibold tabular-nums text-white">{formatRange(r.priceMin, r.priceMax)}</td>
+                      {showFare && <td className="px-5 py-3 text-right font-semibold tabular-nums text-white">{formatRange(r.priceMin, r.priceMax)}</td>}
                     </tr>
                   ))}
                 </tbody>
@@ -179,7 +187,7 @@ export function DepartureBoard({ rows, t }: { rows: DepartureRow[]; t: Messages 
                 <li key={r.id} className="rounded-xl border border-white/10 bg-slate-800/40 p-3">
                   <div className="flex items-baseline justify-between gap-2">
                     <span className="font-mono text-2xl font-bold tabular-nums text-amber-300">{r.time}</span>
-                    <span className="font-semibold tabular-nums text-white">{formatRange(r.priceMin, r.priceMax)}</span>
+                    {showFare && <span className="font-semibold tabular-nums text-white">{formatRange(r.priceMin, r.priceMax)}</span>}
                   </div>
                   <div className="mt-1 flex items-center justify-between gap-2">
                     <span className="font-medium text-white">

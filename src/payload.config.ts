@@ -10,6 +10,7 @@ import { Media } from './collections/Media'
 import { Operators } from './collections/Operators'
 import { Routes } from './collections/Routes'
 import { Departures } from './collections/Departures'
+import { Settings } from './globals/Settings'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -21,9 +22,16 @@ export default buildConfig({
       title: 'Terminal Kutoarjo',
       titleSuffix: ' — Admin',
     },
+    components: {
+      graphics: {
+        Logo: '/components/admin/Brand#Logo',
+        Icon: '/components/admin/Brand#Icon',
+      },
+    },
   },
   // Order = sidebar order
   collections: [Departures, Routes, Operators, Media, Users],
+  globals: [Settings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   // Set NEXT_PUBLIC_SERVER_URL in prod so admin login (CSRF/CORS) works behind a domain.

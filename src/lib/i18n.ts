@@ -32,7 +32,7 @@ export interface Messages {
   emptyHint: string
   footerNote: string
   complaint: string
-  waChat: string
+  complaintCta: string
 }
 
 export const messages: Record<Locale, Messages> = {
@@ -61,7 +61,7 @@ export const messages: Record<Locale, Messages> = {
     emptyHint: 'Coba ubah kata kunci atau filter.',
     footerNote: 'Jadwal dapat berubah sewaktu-waktu. Konfirmasi ke loket / PO terkait.',
     complaint: 'Pengaduan & Informasi',
-    waChat: 'Pengaduan via WhatsApp',
+    complaintCta: 'Sampaikan Aduan',
   },
   en: {
     brand: 'Kutoarjo Terminal',
@@ -88,6 +88,6 @@ export const messages: Record<Locale, Messages> = {
     emptyHint: 'Try changing the keyword or filters.',
     footerNote: 'Schedules may change. Please confirm at the counter / operator.',
     complaint: 'Complaints & Info',
-    waChat: 'Complaints via WhatsApp',
+    complaintCta: 'Submit a Complaint',
   },
 }

@@ -5,7 +5,7 @@ import { messages } from '@/lib/i18n'
 import { LangSwitch } from '@/components/LangSwitch'
 import { Clock } from '@/components/Clock'
 import { DepartureBoard, type DepartureRow } from '@/components/DepartureBoard'
-import { WHATSAPP, waLink } from '@/lib/contact'
+import { COMPLAINT_FORM_URL } from '@/lib/contact'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,6 +14,8 @@ export default async function Page() {
   const t = messages[locale]
 
   const payload = await getPayload({ config })
+  const settings = await payload.findGlobal({ slug: 'settings' })
+  const showFare = settings?.showFare ?? false
   const { docs } = await payload.find({
     collection: 'departures',
     where: { isActive: { equals: true } },
@@ -71,21 +73,22 @@ export default async function Page() {
         </div>
       </header>
 
-      <DepartureBoard rows={rows} t={t} />
+      <DepartureBoard rows={rows} t={t} showFare={showFare} />
 
       <footer className="mt-6 space-y-2 text-center text-xs text-slate-500">
         <p>
           <span className="text-slate-400">{t.complaint}:</span>{' '}
           <a
-            href={waLink()}
+            href={COMPLAINT_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-semibold text-emerald-400 hover:text-emerald-300"
+            className="inline-flex items-center gap-1 font-semibold text-amber-300 hover:text-amber-200"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" aria-hidden>
-              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.1.55 4.06 1.6 5.83L2 22l4.4-1.15a9.9 9.9 0 0 0 5.64 1.74h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z" />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5" aria-hidden>
+              <path d="M3 11l18-5v12L3 14v-3z" />
+              <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
             </svg>
-            {WHATSAPP.display}
+            {t.complaintCta}
           </a>
         </p>
         <p>{t.footerNote}</p>

@@ -1,0 +1,70 @@
+/* Terminal Kutoarjo — admin theme. Matches the public board: amber accent on a
+   neutral panel. These rules are unlayered, so they win over Payload's
+   @layer payload-default without needing !important. */
+
+:root {
+  --brand-amber: #fbbf24; /* amber-400 */
+  --brand-amber-soft: #fcd34d; /* amber-300 */
+  --brand-ink: #1c1917; /* readable text on amber */
+}
+
+/* Primary actions → amber (the button reads these local custom props). */
+.btn--style-primary {
+  --bg-color: var(--brand-amber);
+  --color: var(--brand-ink);
+  --hover-bg: var(--brand-amber-soft);
+  --hover-color: var(--brand-ink);
+}
+
+/* Focused fields highlight in amber instead of grey. */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--brand-amber);
+  box-shadow: 0 0 0 2px rgb(251 191 36 / 0.25);
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────────
+   Section headers compact + uppercase; links become full-width rows with a
+   hover state and a branded amber "you are here" pill. */
+
+.nav-group__toggle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  width: 100%;
+  box-sizing: border-box;
+  padding-block: 8px;
+  padding-inline: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--theme-elevation-650);
+  transition: background-color 80ms ease, color 80ms ease;
+}
+
+.nav__link:hover {
+  background-color: var(--theme-elevation-100);
+  color: var(--theme-elevation-1000);
+  text-decoration: none;
+}
+
+/* Active item: amber-tinted pill + accent bar, label kept high-contrast. */
+.nav__link.active {
+  background-color: rgb(251 191 36 / 0.14);
+  color: var(--theme-elevation-1000);
+  font-weight: 600;
+}
+
+.nav__link-indicator {
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: var(--brand-amber);
+}
